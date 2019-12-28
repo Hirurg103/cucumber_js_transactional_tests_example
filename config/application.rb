@@ -15,5 +15,15 @@ module RunCapybaraJsTestsInTransationalMode
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.generators do |g|
+      g.template_engine :erb
+      g.test_framework :rspec
+      g.integration_tool :rspec
+      g.jbuilder false
+      g.view_specs false
+      g.helper_specs false
+      g.routing_specs false
+    end
   end
 end
