@@ -58,4 +58,7 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :transaction
 
-Capybara.javascript_driver = :chrome
+Capybara.javascript_driver =
+  ENV['JS_DRIVER'].in?(%w[selenium selenium_headless selenium_chrome selenium_chrome_headless chrome headless_chrome]) ?
+  ENV['JS_DRIVER'].to_sym :
+  :chrome
