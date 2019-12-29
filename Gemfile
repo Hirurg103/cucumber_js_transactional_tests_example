@@ -50,6 +50,7 @@ group :test do
   gem 'webdrivers'
   gem 'rspec-rails'
   gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
   gem 'factory_bot_rails'
 end
 
