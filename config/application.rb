@@ -24,6 +24,7 @@ module RunCapybaraJsTestsInTransationalMode
       g.view_specs false
       g.helper_specs false
       g.routing_specs false
+      g.factory_bot dir: 'spec/factories'
     end
   end
 end
