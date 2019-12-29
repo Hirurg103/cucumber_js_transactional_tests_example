@@ -4,7 +4,12 @@ Feature: View users
   As a User
   I want to see the list of users
 
-  Scenario: View users
+  Scenario: View one user
     Given I have a user
     When I visit the users list
       Then I should see the user
+
+  Scenario: View two users
+    Given I have two users
+    When I visit the users list
+      Then I should see the both users
