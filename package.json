@@ -1,5 +1,5 @@
 {
-  "name": "run_capybara_js_tests_in_transational_mode",
+  "name": "cucumber_js_transactional_tests_example",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
