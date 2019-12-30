@@ -15,7 +15,7 @@ DB_ADAPTER=mysql bundle exec rake db:create && bundle exec rake db:migrate
 ### Running tests
 
 ```
-DB_ADAPTER=mysql JS_DRIVER=selenium bunde exec cucumber
+DB_ADAPTER=mysql JS_DRIVER=selenium bundle exec cucumber
 ```
 
 Possible values for `DB_ADAPTER`:
