@@ -9,16 +9,16 @@ This example app shows basic configuration that allows to run Cucumber JS scenar
 git clone https://github.com/Hirurg103/cucumber_js_transactional_tests_example.git
 cd cucumber_js_transactional_tests_example
 bundle
-DB_ADAPTER=mysql bundle exec rake db:create && bundle exec rake db:migrate
+DBMS=mysql bundle exec rake db:create && bundle exec rake db:migrate
 ```
 
 ### Running tests
 
 ```
-DB_ADAPTER=mysql JS_DRIVER=selenium bundle exec cucumber
+DBMS=mysql JS_DRIVER=selenium bundle exec cucumber
 ```
 
-Possible values for `DB_ADAPTER`:
+Possible values for `DBMS`:
 * mysql
 * postgresql
 

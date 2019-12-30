@@ -75,7 +75,7 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *<%= ENV["DB_ADAPTER"].in?(%w[mysql postgresql]) ? ENV["DB_ADAPTER"] : "default" %>
+  <<: *<%= ENV["DBMS"].in?(%w[mysql postgresql]) ? ENV["DBMS"] : "default" %>
   database: cucumber_js_transactional_tests_example_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
