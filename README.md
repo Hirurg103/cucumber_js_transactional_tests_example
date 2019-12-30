@@ -1,24 +1,29 @@
-# README
+# Cucumber JS Transactional Tests Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 5.1+ "safely" shares the database connection between the app and test threads.
+This example app shows basic configuration that allows to run Cucumber JS scenarios within transaction
 
-Things you may want to cover:
+### Installation
 
-* Ruby version
+```
+git clone https://github.com/Hirurg103/cucumber_js_transactional_tests_example.git
+cd cucumber_js_transactional_tests_example
+bundle
+DB_ADAPTER=mysql bundle exec rake db:create && bundle exec rake db:migrate
+```
 
-* System dependencies
+### Running tests
 
-* Configuration
+```
+DB_ADAPTER=mysql JS_DRIVER=selenium bunde exec cucumber
+```
 
-* Database creation
+Possible values for `DB_ADAPTER`:
+* mysql
+* postgresql
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Possible values for `JS_DRIVER`:
+* selenium
+* selenium_headless
+* selenium_chrome
+* selenium_chrome_headless
